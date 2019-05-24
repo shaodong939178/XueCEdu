@@ -10,5 +10,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @Date: Create in 2019/5/14 14:18
  * @Version: 1.0
  **/
-public interface CmsConfigRepository extends MongoRepository<CmsConfig,String> {
+public interface CmsConfigRepository extends
+        MongoRepository<CmsConfig,String> {
+
 }

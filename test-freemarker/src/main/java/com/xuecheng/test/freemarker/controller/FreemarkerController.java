@@ -1,9 +1,11 @@
 package com.xuecheng.test.freemarker.controller;
 
 import com.xuecheng.test.freemarker.model.Student;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 
 import java.util.*;
@@ -20,7 +22,20 @@ import java.util.*;
 //@RestController默认输出json数据。
 public class FreemarkerController {
 
-    @RequestMapping("test1")
+//    @Autowired
+//    RestTemplate restTemplate;
+
+    @RequestMapping("/banner")
+    public String index_banner(Map<String,Object> map){
+//       ResponseEntity<Map> forEntity =  restTemplate.getForEntity("http://localhost:31001/cms/config/getmodel/5a791725dd573c3574ee333f",Map.class);
+//        //使用restTemplate请求轮播图的模型数据
+//        Map body = forEntity.getBody();
+//        map.putAll(body);
+//        return "index_banner";
+        return  null;
+    }
+
+    @RequestMapping("/test1")
     public String freemarker(Map<String, Object> map) {
         map.put("name", "学成在线");
         Student stu1 = new Student();

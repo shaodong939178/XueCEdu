@@ -29,6 +29,7 @@ public class ManageCmsApplication {
 //    配置RestTemplate
     @Bean
     public RestTemplate restTemplate(){
-        return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
+        return new RestTemplate(
+                new OkHttp3ClientHttpRequestFactory());
     }
 }
