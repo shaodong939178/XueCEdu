@@ -22,17 +22,16 @@ import java.util.*;
 //@RestController默认输出json数据。
 public class FreemarkerController {
 
-//    @Autowired
-//    RestTemplate restTemplate;
+    @Autowired
+    RestTemplate restTemplate;
 
     @RequestMapping("/banner")
     public String index_banner(Map<String,Object> map){
-//       ResponseEntity<Map> forEntity =  restTemplate.getForEntity("http://localhost:31001/cms/config/getmodel/5a791725dd573c3574ee333f",Map.class);
-//        //使用restTemplate请求轮播图的模型数据
-//        Map body = forEntity.getBody();
-//        map.putAll(body);
-//        return "index_banner";
-        return  null;
+       ResponseEntity<Map> forEntity =  restTemplate.getForEntity("http://localhost:31001/cms/config/getmodel/5a791725dd573c3574ee333f",Map.class);
+        //使用restTemplate请求轮播图的模型数据
+        Map body = forEntity.getBody();
+        map.putAll(body);
+        return "index_banner";
     }
 
     @RequestMapping("/test1")

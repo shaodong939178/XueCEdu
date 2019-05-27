@@ -20,9 +20,9 @@ public class FreemarkerTestApplication {
         SpringApplication.run(FreemarkerTestApplication.class,args);
     }
     //    配置RestTemplate
-//    @Bean
-//    public RestTemplate restTemplate(){
-//        return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
-//
-//    }
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
+
+    }
 }
